@@ -1,0 +1,118 @@
+@keyframes ball{
+    0%{ bottom: 500px; }
+    5%{ bottom: 100px;}
+    10%{ bottom: 400px;}
+    15%{ bottom: 170px; } 
+    20%{ bottom: 400px; }
+    25%{ bottom: 240px; }
+    30%{ bottom: 500px; }
+    35%{ bottom: 310px; }
+    40%{ bottom: 500px; } 
+    45%{ bottom: 380px; }
+    50%{ bottom: 500px; }
+    55%{ bottom: 100px; }
+    60%{ bottom: 400px; } 
+    65%{ bottom: 170px; }
+    70%{ bottom: 400px; }
+    75%{ bottom: 240px; }
+    80%{ bottom: 500px; }
+    85%{ bottom: 310px; } 
+    90%{ bottom: 500px;}
+    95%{ bottom: 380px;}
+    100%{ bottom: 500px; }
+}
+@keyframes ballLeft{
+   0%{
+    left: -200px;
+}
+   50%{
+       left: 1900px;
+   }
+   100%{
+       left: -200px;
+   }
+}
+@keyframes stage1{
+    0%{ top: 0; height: 200px;}
+    49%{ top: 0; height: 200px;}
+    50%{ top: 0; height: 480px;}
+    99%{ top: 0; height: 480px;}
+}
+@keyframes stage2{
+    0%{ top: 0; height: 270px;}
+    49%{ top: 0; height: 270px;}
+    50%{ top: 0; height: 410px;}
+    99%{ top: 0; height: 410px;}
+}
+ @keyframes stage4{
+    0%{ top: 0; height: 410px;}
+    49%{ top: 0; height: 410px;}
+    50%{ top: 0; height: 270px;}
+    99%{ top: 0; height: 270px;}
+}
+@keyframes stage5{
+    0%{ top: 0; height: 480px;}
+    49%{ top: 0; height: 480px;}
+    50%{ top: 0; height: 200px;}
+    99%{ top: 0; height: 200px;}
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3000px;
+    background-color: aliceblue;
+}
+.main{
+    display: flex;
+    position: relative;
+    border: 25px solid darkolivegreen;
+    height: 1300px;
+}
+.ball{
+    position: absolute;
+    margin: 500px 0 200px 200px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: rgb(101, 128, 101);
+    animation: ball 10s linear infinite, ballLeft 10s linear infinite ;
+}
+.stairs{
+    display: flex;
+    align-items: flex-end;
+    width: 2000px;
+    justify-content: space-between;
+    margin-left: 155px;
+    margin-right: 155px;
+    margin-bottom: 100px;
+}
+.stage1{
+    width: 300px;
+    height: 200px;
+    background-color: darkseagreen;
+    animation: stage1 10s linear infinite;
+}
+.stage2{
+    width: 300px;
+    height: 270px;
+    background-color: darkseagreen;
+    animation: stage2 10s linear infinite;
+}
+.stage3{
+    width: 300px;
+    height: 340px;
+    background-color: darkseagreen;
+}
+.stage4{
+    width: 300px;
+    height: 410px;
+    background-color: darkseagreen;
+    animation: stage4 10s linear infinite;
+}
+.stage5{
+    width: 300px;
+    height: 480px;
+    background-color: darkseagreen;
+    animation: stage5 10s linear infinite;
+}
