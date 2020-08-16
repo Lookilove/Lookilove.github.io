@@ -1,0 +1,122 @@
+@keyframes ball{
+    0%{ bottom: 250px; }
+    5%{ bottom: 95px;}
+    10%{ bottom: 200px;}
+    15%{ bottom: 165px; } 
+    20%{ bottom: 250px; }
+    25%{ bottom: 207px; }
+    30%{ bottom: 270px; }
+    35%{ bottom: 222px; }
+    40%{ bottom: 280px; } 
+    45%{ bottom: 207px; }
+    50%{ bottom: 250px; }
+    55%{ bottom: 127px; }
+    60%{ bottom: 200px; } 
+    65%{ bottom: 182px; }
+    70%{ bottom: 250px; }
+    75%{ bottom: 207px; }
+    80%{ bottom: 270px; }
+    85%{ bottom: 205px; } 
+    90%{ bottom: 280px;}
+    95%{ bottom: 180px;}
+    100%{ bottom: 250px; }
+}
+@keyframes ballLeft{
+   0%{
+    transform: rotate(45deg) translateX(-50px);
+}
+
+   50%{
+    transform: rotate(0deg) translateX(400px);
+   }
+   100%{
+    transform: rotate(45deg) translateX(-50px);
+   }
+}
+@keyframes stage1{
+    0%{ top: 0; height: 70px;}
+    49%{ top: 0; height: 70px;}
+    50%{ top: 0; height: 150px;}
+    99%{ top: 0; height: 150px;}
+}
+@keyframes stage2{
+    0%{ top: 0; height: 90px;}
+    49%{ top: 0; height: 90px;}
+    50%{ top: 0; height: 130px;}
+    99%{ top: 0; height: 130px;}
+}
+@keyframes stage4{
+    0%{ top: 0; height: 130px;}
+    49%{ top: 0; height: 130px;}
+    50%{ top: 0; height: 90px;}
+    99%{ top: 0; height: 90px;}
+}
+@keyframes stage5{
+    0%{ top: 0; height: 150px;}
+    49%{ top: 0; height: 150px;}
+    50%{ top: 0; height: 70px;}
+    99%{ top: 0; height: 70px;}
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+}
+.main{
+    display: flex;
+    position: relative;
+    margin: 120px;
+    border: 5px solid darkolivegreen;
+    width: 500px;
+    height: 400px;
+}
+.ball{
+    position: absolute;
+    margin: 230px 0 20px 53px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(101, 128, 101);
+    animation: ball 10s linear infinite, ballLeft 10s linear infinite ;
+}
+.stairs{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin: 100px 30px 50px 34px;
+}
+.stage1{
+    width: 70px;
+    height: 70px;
+    margin-right: 20px;
+    background-color: darkseagreen;
+    animation: stage1 10s linear infinite;
+}
+.stage2{
+    width: 70px;
+    height: 90px;
+    margin-right: 20px;
+    background-color: darkseagreen;
+    animation: stage2 10s linear infinite;
+}
+.stage3{
+    width: 70px;
+    height: 110px;
+    margin-right: 20px;
+    background-color: darkseagreen;
+}
+.stage4{
+    width: 70px;
+    height: 130px;
+    margin-right: 20px;
+    background-color: darkseagreen;
+    animation: stage4 10s linear infinite;
+}
+.stage5{
+    width: 70px;
+    height: 150px;
+    margin-right: 20px;
+    background-color: darkseagreen;
+    animation: stage5 10s linear infinite;
+}
