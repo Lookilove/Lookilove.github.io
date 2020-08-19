@@ -1,0 +1,39 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(133, 167, 189, 0.397);
+}
+.bottom{
+    color: rgba(3, 29, 16, 0.89);
+    font-weight: bold;
+    user-select: none;
+    margin-top: 300px;
+    height: 50px;
+    width: 150px;
+    border-radius: 5px;
+    overflow:hidden;
+    background: linear-gradient(to right,lightgreen  0%, rgba(0, 100, 0, 0.712) 100%);
+    box-shadow:inset -3px -3px rgba(41, 77, 12, 0.527), inset 3px 3px rgba(105, 218, 156, 0.363);
+}
+p{
+    position: absolute;
+    margin-left: 33px;
+}
+.line{
+    position: relative;
+    top: -20px;
+    left: -30px;
+    width: 4px;
+    height: 85px;
+    border-radius: 2px;
+    background: linear-gradient(to right,rgba(144, 238, 144, 0.226)  0%,rgba(144, 238, 144, 0.226)  15%, rgb(179, 248, 179) 15%, rgb(179, 248, 179) 85%, rgba(144, 238, 144, 0.226) 85%,rgba(144, 238, 144, 0.226) 100%);
+    transform: rotate(45deg);
+    transition: margin-left 2s;
+}
+.bottom:hover .line{
+    margin-left: 210px;
+}
+.bottom:active{
+    box-shadow:inset 3px 3px rgba(41, 77, 12, 0.527), inset -3px -3px rgba(105, 218, 156, 0.363);
+}
