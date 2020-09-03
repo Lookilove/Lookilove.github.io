@@ -1,0 +1,178 @@
+main{
+    display: grid;
+    height: 100vh;
+    min-width: 178px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    font-size: 14px;
+    grid-template-columns:
+        3fr 3fr 1.5fr 4.5fr;
+    grid-template-rows:
+        1fr 3fr 2fr 0.5fr 2fr 1.5fr;
+    grid-template-areas: 
+        "lgab lgab lgab lgab"
+        "as st st st"
+        "as fl fl fl"
+        "or or or or"
+        "dd dd dd dd"
+        "hl hl hl hl";
+}
+main *{
+    border: 1px solid black;
+}
+.lr{
+    overflow-y: auto;
+}
+.lgab{
+    grid-area: lgab;
+    text-align: center;
+    .about{
+        text-align: justify;
+    }
+    .logo{
+        padding: 10px;
+        box-sizing: border-box;
+    }
+}
+@media screen and (min-width: 400px) {
+    .lgab{
+        display: grid;
+        grid-template-columns: 7.5fr 4.5fr;
+    }
+    .divdiv{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+.about{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .ab{
+        border: none;
+        margin: 10px;
+    }
+    .sc{
+        border: none;
+        text-align: end;
+        margin: 10px;
+    }
+}
+aside{
+    grid-area: as;
+    width: fit-content;
+    overflow-y: auto;
+    display: grid;
+    height: 100%;
+    grid-template-columns:
+        1fr 1fr;
+    grid-template-rows:
+        1fr 1fr;
+    grid-template-areas: 
+        "l1 l2"
+        "l3 l4";
+    .lr1{
+        width: fit-content;
+        height: 170px;
+        margin: 10px;
+    }
+    .lor1{
+        grid-area: l1;
+    }
+    .lor2{
+        grid-area: l2;
+        justify-self: end;
+        margin-top: 30px;
+    }
+    .lor3{
+        grid-area: l3; 
+    }
+    .lor4{
+        grid-area: l4;
+        justify-self: end;
+        margin-top: 30px;
+    }
+}
+@media screen and (max-width: 400px) {
+    aside{
+        grid-template-columns:
+        1fr 1fr;
+        grid-template-rows:
+        1fr 1fr;
+        grid-template-areas: 
+        "l2 l1"
+        "l4 l3";
+        .lr1{
+            max-width: 25px;
+        }
+    }
+}
+.sometext{    
+    grid-area: st;
+    min-height: 130px;
+    display: grid;
+    overflow-y: auto;
+    .lor5{
+        display: grid;
+        grid-template-columns: 7fr 1fr;
+        max-width: 600px;
+    }
+    .lor6{
+        display: grid;
+        grid-template-columns: 1fr 7fr;
+        justify-self: end;
+        max-width: 600px;
+    }
+    .lorim{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: url(/images/loremipsum.png) 100% 100% no-repeat;
+        background-size: cover; 
+        margin: 10px;
+    }
+    .lorim5{
+        float: right;
+        margin-left: 10px;
+    }
+    .lorim6{
+        float: left;
+    }
+}
+.flowers{
+    grid-area: fl;
+    min-height: 70px;
+    background: url(/images/flowers.jpg) 100% 100% no-repeat;
+    background-size: cover;
+}
+.one-row{
+    grid-area: or;
+    display:grid;
+    align-items: center;
+    direction: ltr;
+}
+@media screen and (max-width: 400px) {
+    .anim{
+        display: none;
+    }
+    main{
+    grid-template-rows:
+        1fr 3fr 2fr 2.5fr 1.5fr;
+    grid-template-areas: 
+        "lgab lgab lgab lgab"
+        "as st st st"
+        "as fl fl fl"
+        "dd dd dd dd"
+        "hl hl hl hl";
+    }
+}
+.divdiv{
+    grid-area: dd;
+    display: grid;
+    min-height: 100px;
+}
+.hills{
+    grid-area: hl;
+    min-height: 50px;
+    background: url(/images/hills.jpg) 100% 100% no-repeat;
+    background-size: cover;
+}
