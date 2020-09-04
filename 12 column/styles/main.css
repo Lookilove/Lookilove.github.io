@@ -1,0 +1,297 @@
+main {
+  display: -ms-grid;
+  display: grid;
+  height: 100vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 auto;
+  font-size: 14px;
+  -ms-grid-columns: 3fr 3fr 1.5fr 4.5fr;
+      grid-template-columns: 3fr 3fr 1.5fr 4.5fr;
+  -ms-grid-rows: 1fr 3fr 2fr 0.5fr 2fr 1.5fr;
+      grid-template-rows: 1fr 3fr 2fr 0.5fr 2fr 1.5fr;
+      grid-template-areas: "lgab lgab lgab lgab" "as st st st" "as fl fl fl" "or or or or" "dd dd dd dd" "hl hl hl hl";
+}
+
+main * {
+  border: 1px solid black;
+}
+
+.lr {
+  overflow-y: auto;
+}
+
+.lgab {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: lgab;
+  text-align: center;
+}
+
+.lgab .about {
+  text-align: justify;
+}
+
+.lgab .logo {
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media screen and (min-width: 400px) {
+  .lgab {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 7.5fr 4.5fr;
+        grid-template-columns: 7.5fr 4.5fr;
+  }
+  .divdiv {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+.about {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.about .ab {
+  border: none;
+  margin: 10px;
+}
+
+.about .sc {
+  border: none;
+  text-align: end;
+  margin: 10px;
+}
+
+aside {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: as;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  overflow-y: auto;
+  display: -ms-grid;
+  display: grid;
+  height: 100%;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: "l1 l2" "l3 l4";
+}
+
+aside .lr1 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 170px;
+  margin: 10px;
+}
+
+aside .lor1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: l1;
+}
+
+aside .lor2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: l2;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  margin-top: 30px;
+}
+
+aside .lor3 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: l3;
+}
+
+aside .lor4 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: l4;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  margin-top: 30px;
+}
+
+.sometext {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-area: st;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -ms-grid;
+  display: grid;
+  overflow-y: auto;
+}
+
+.sometext .lor5 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 7fr 1fr;
+      grid-template-columns: 7fr 1fr;
+  max-width: 600px;
+}
+
+.sometext .lor6 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 7fr;
+      grid-template-columns: 1fr 7fr;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  max-width: 600px;
+}
+
+.sometext .lorim {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: url("../images/loremipsum.png") 100% 100% no-repeat;
+  background-size: cover;
+  margin: 10px;
+}
+
+.sometext .lorim5 {
+  float: right;
+  margin-left: 10px;
+}
+
+.sometext .lorim6 {
+  float: left;
+}
+
+.flowers {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-area: fl;
+  min-height: 70px;
+  background: url("../images/flowers.jpg") 100% 100% no-repeat;
+  background-size: cover;
+}
+
+.one-row {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: or;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  direction: ltr;
+}
+
+@media screen and (max-width: 400px) {
+  .anim {
+    display: none;
+  }
+  main {
+    -ms-grid-columns: 3fr 3fr 1.5fr 4.5fr;
+        grid-template-columns: 3fr 3fr 1.5fr 4.5fr;
+    -ms-grid-rows: 1fr 3fr 2fr 2.5fr 1.5fr;
+        grid-template-rows: 1fr 3fr 2fr 2.5fr 1.5fr;
+        grid-template-areas: "lgab lgab lgab lgab" "as st st st" "as fl fl fl" "dd dd dd dd" "hl hl hl hl";
+  }
+  .lgab {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-area: lgab;
+  }
+  .sometext {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 3;
+    grid-area: st;
+  }
+  .flowers {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 3;
+    grid-area: fl;
+  }
+  .divdiv {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-area: dd;
+  }
+  .hills {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-area: hl;
+  }
+  aside {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    grid-area: as;
+    max-width: 170px;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "l2 l1" "l4 l3";
+  }
+  .lor1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: l1;
+  }
+  .lor2 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: l2;
+  }
+  .lor3 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: l3;
+  }
+  .lor4 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: l4;
+  }
+}
+
+.divdiv {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: dd;
+  display: -ms-grid;
+  display: grid;
+  min-height: 100px;
+}
+
+.hills {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: hl;
+  min-height: 50px;
+  background: url("../images/hills.jpg") 100% 100% no-repeat;
+  background-size: cover;
+}
+/*# sourceMappingURL=main.css.map */
