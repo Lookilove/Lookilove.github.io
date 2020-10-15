@@ -1,0 +1,18 @@
+.chess-board{
+    width: 560px;
+    height: 560px;
+    margin: 30px auto;
+    border: 5px solid #4b280a;
+    font-size: 70px;
+}
+.block{
+    width: 70px;
+    height: 70px;
+    float: left;
+}
+.black{
+    background-color: #4b280a;
+}
+.white{
+    background-color: #c3b1a5;
+}
