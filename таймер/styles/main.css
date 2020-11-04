@@ -1,0 +1,53 @@
+@font-face{
+    src: url('../font/fontello.woff2');
+    font-family: "fontello_1symb";
+}
+body{
+    background-color: aliceblue;
+    width: auto;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 50px;
+}
+.timer{
+    width: 280px;
+    height: 50px;
+    border: 5px solid darkgrey;
+    color: darkblue;    
+}
+.fontello{
+    margin-left: 230px;
+    margin-top: -57px;
+    opacity: 1;
+}
+.fontello::after{
+    font-family: "fontello_1symb";
+    content: '\e832';
+}
+.act{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 50px;
+    margin: 20px;
+}
+#inp1h, #inp1m {
+    width: 75px;
+    height: 50px;
+    border: 5px solid darkgrey;
+}
+#inp2{
+    border: 5px solid darkgrey;
+    width: 150px;
+    height: 60px;
+    user-select: none;
+    margin: 20px;
+    outline: none;
+}
